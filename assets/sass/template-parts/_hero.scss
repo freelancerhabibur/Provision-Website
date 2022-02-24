@@ -1,0 +1,53 @@
+.hero {
+    position: relative;
+    .hero-slider {
+        .slider-item {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            // height: 850px;
+            height: 500px;
+
+            @media (min-width: 425px) {
+                height: 550px;
+            }
+            @include sm-devices {
+                height: 600px;
+            }
+            @include md-devices {
+                height: 650px;
+            }
+            @include xxl-devices {
+                height: 850px;
+            }
+        }
+    }
+
+    .social-media {
+        position: absolute;
+        top: 50%;
+        right: 100px;
+        transform: translateY(-50%);
+        z-index: 1;
+        display: none;
+
+        a {
+            display: block;
+            color: $color__white;
+            font-size: 18px;
+            @include width-height(40px, 40px);
+            border-radius: 50%;
+            border: 1px solid $color__white;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px 0;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: $color__dark__yellow;
+                color: $color__black;
+                border-color: $color__dark__yellow;
+            }
+        }
+    }
+}

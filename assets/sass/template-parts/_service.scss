@@ -1,0 +1,120 @@
+.our-services {
+    overflow: hidden;
+    .col-lg-4 {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: $color__gray;
+            width: 1000%;
+            z-index: -1;
+        }
+    }
+    .col-lg-8 {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: $color__silver;
+            width: 1000%;
+            z-index: -1;
+        }
+    }
+
+    .services-info-text {
+        padding: 40px 0px;
+        text-align: center;
+        max-width: 560px;
+        margin: 0 auto;
+
+        @include sm-devices {
+            padding: 60px 40px 60px 40px;
+        }
+        @include lg-devices {
+            padding: 40px 0 40px 30px;
+            text-align: left;
+        }
+        @include xxl-devices {
+            padding: 60px 30px 60px 0;
+        }
+
+        p {
+            color: $color__white;
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            @include sm-devices {
+                font-size: 18px;
+            }
+        }
+        a {
+            background-color: $color__yellow;
+            color: $color__black;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 12px;
+            @include sm-devices {
+                font-size: 16px;
+            }
+        }
+    }
+    .service-slider {
+        
+        @include xxl-devices {
+            padding: 40px 0 40px 40px;
+            // width: 110%;
+        }
+        .owl-stage-outer {
+            padding: 20px;
+            margin: 0 -20px;
+        }
+        .item {
+            text-align: center;            
+            padding: 40px 20px;
+            transition: all 0.3s;
+            border-radius: 10px;
+            .icon {
+                height: 80px;
+                margin-bottom: 20px;
+                img {
+                    height: 80px;
+                    margin: 0 auto;
+                }
+            }
+            p {
+                font-size: 17px;
+            }
+
+            .button {
+                background-color: transparent;
+                color: $color__black;
+                padding: 10px 30px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 12px;
+                border: 1px solid $color__black;
+                transition: all 0.3s;
+                margin-top: 15px;
+                line-height: normal;
+
+                &:hover {
+                    background-color: $color__yellow;
+                    border-color: $color__yellow;
+                }
+            }
+        }
+        .owl-item.active {
+            height: 100%;
+            .item {
+                box-shadow: 0 0 20px 0 rgba($color__black, 0.08);
+            }
+        }
+    }
+}

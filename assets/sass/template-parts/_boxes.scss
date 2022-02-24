@@ -1,0 +1,99 @@
+.boxes {
+    padding: 50px 0;    
+    position: relative;
+    z-index: 1;
+    background-color: rgba($color__silver, 0.3);
+    background-image: url(../images/div-bg1.webp);
+    background-repeat: no-repeat;
+    background-position: center right;
+    @include sm-devices {
+        padding: 90px 0;
+    }
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .box-item {
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba($color__silver, 1);
+        background-color: rgba($color__silver, .8);
+        border-radius: 10px;
+        margin-bottom: 20px;
+
+        @include sm-devices {
+            padding: 40px 30px;
+        }
+        @include lg-devices {
+            padding: 60px 50px;
+        }
+
+        .icon {
+            margin: 0 0 20px 0;
+            @include lg-devices {
+                margin: 0 0 40px 0;
+            }
+            img {
+                width: 40px;
+                height: 40px;
+                @media (min-width: 410px) {
+                    width: 50px;
+                    height: 50px;
+                }
+                @include sm-devices {
+                    height: 60px;
+                    width: 60px;
+                }
+                @include lg-devices {
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+        }
+        h4 {
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 16px;
+
+            @media (min-width: 410px) {
+                margin-bottom: 25px;                
+            }
+            @include sm-devices {
+                margin-bottom: 30px;
+                font-size: 18px;
+            }
+
+            @include md-devices {
+                font-size: 22px;
+                margin-bottom: 35px;
+            }
+        }
+        .button {
+            background-color: $color__yellow;
+            display: block;
+            width: 100%;
+            border-radius: 4px;
+            padding: 8px 10px;
+            font-size: 10px;
+            font-weight: 600;
+            transition: all 0.3s;
+
+            @media (min-width: 410px) {
+                border-radius: 10px;
+                padding: 10px 10px;
+                font-weight: 600;
+                font-size: 12px;
+            }
+            @include sm-devices {
+                font-size: 14px;
+            }
+            @include lg-devices {
+                font-size: 16px;
+            }
+
+            &:hover {
+                background-color: $color__dark__yellow;
+            }
+        }
+    }
+}

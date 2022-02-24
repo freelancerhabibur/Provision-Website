@@ -1,0 +1,35 @@
+.catalogues {
+    padding: 40px 0;
+    @include bg-gradient(0deg, $color__yellow 30%, $color__light__yellow);
+
+    .item{
+        text-align: center;
+        margin-bottom: 30px;
+        .button-holder {
+            margin-top: 25px;
+            justify-content: space-evenly;
+            background-color: rgba($color__dark__yellow, 0.5);
+            border-radius: 10px;
+            a {
+                padding: 7px 10px;
+                opacity: 0.8;
+                display: inline-block;
+                svg {
+                    width: 16px;
+                    @include sm-devices {
+                        width: 20px;
+                    }
+                    @include md-devices {
+                        width: 22px;
+                    }
+                }
+                @media (min-width: 410px) {
+                    padding: 10px 15px;
+                }
+                @include sm-devices {
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+}
